@@ -1,0 +1,6 @@
+num=int(input("Enter a number: "))
+digit_sum= sum(int(digit) for digit in str(num))
+print(f"sum of digits in {num} is {digit_sum}")
+###method 2
+num=int(input("Enter a number: "))
+print("sum of digit:",sum(map(int,str(num))))
