@@ -15,3 +15,8 @@ By the end , I will have **15 days projects** in python.
 -[X] Prime Numbers
 -[X] Palindrome Checker
 -[X] Rock-Paper-Scissors Game
+###✔ Day 3-Functions practice
+-[X] Fibonacci series
+-[X] Factors(Recursion)
+-[X] Largest Number in a list
+-[X] Unit Converter
