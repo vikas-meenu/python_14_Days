@@ -1,0 +1,16 @@
+import random
+def rock_paper_scissors():
+    choices = ["rock","paper","scissors"]
+    user_choice = input("enter your choice from rock/paper/scissors : ")
+    if user_choice not in choices:
+        print("invalid choice", "Chose only from rock/paper/scissors")
+    computer_choice = random.choice(choices)
+    if user_choice == computer_choice:
+        print("Its a tie!,No one win")
+    elif (user_choice=="rock" and computer_choice=="scissors") or\
+            (user_choice=="scissors" and computer_choice=="paper") or \
+            (user_choice=="paper" and computer_choice=="rock") :
+        print("hurray! You Win!")
+    else:
+        print("You Lose!", "Computer Win")
+rock_paper_scissors()
