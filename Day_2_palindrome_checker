@@ -1,0 +1,10 @@
+## Task-3 Palindrome checker
+def is_palindrome(text: str)->bool:
+    cleaned = text.replace(" "," ").lower()
+    return cleaned == cleaned[::-1]
+word1= "madam"
+word2 = "hello"
+sentence = "Run nurses"
+print(f"{word1}-->{is_palindrome(word1)}")
+print(f"{word2}-->{is_palindrome(word2)}")
+print(f"{sentence}-->{is_palindrome(sentence)}")
