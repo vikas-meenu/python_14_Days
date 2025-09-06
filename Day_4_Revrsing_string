@@ -1,0 +1,10 @@
+##task3 reversing a string
+s="python"
+print(s[::-1])
+#method 2
+def reverse_string(s):
+    reversed_string = ""
+    for ch in (s):
+        reversed_string = ch+reversed_string
+    return reversed_string
+print(reverse_string("python"
