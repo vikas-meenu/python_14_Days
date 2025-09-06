@@ -20,3 +20,9 @@ By the end , I will have **15 days projects** in python.
 -[X] Factors(Recursion)
 -[X] Largest Number in a list
 -[X] Unit Converter
+###✔ Day 4-Functions practice
+-[X] Check Prime Numbers
+-[X] Multiplication Table
+-[X] Reversing a string
+-[X] Counting vowels in a string
+
