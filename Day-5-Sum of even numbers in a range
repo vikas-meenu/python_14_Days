@@ -1,0 +1,8 @@
+##task-1 Sum of even numbers in range
+start = int(input("Enter start number: "))
+end = int(input("Enter end number: "))
+even_sum = 0
+for num in range(start, end+1):
+ if num%2==0:
+  even_sum +=num
+print(f"sum of all the even numbers from {start} to {end} = {even_sum}")
