@@ -1,0 +1,9 @@
+## Check for armstrong number
+num=int(input("Enter a number: "))
+digits = str(num)
+power = len(digits)
+armstrong_number = sum(int(digit)**power for digit in digits)
+if armstrong_number == num:
+    print(f"The number {num} is an armstrong number")
+else:
+    print(f"The number {num} is not an armstrong number")
