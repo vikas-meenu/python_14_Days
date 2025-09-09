@@ -1,0 +1,9 @@
+##task-2 Factor count of a number
+n = int(input("Enter a number: "))
+count = 0
+print("Factor: ", end=" ")
+for i in range(1, n+1):
+    if n%i==0:
+     print(i, end=" ")
+     count += 1
+print(f"number of factors of {n}= {count}")
