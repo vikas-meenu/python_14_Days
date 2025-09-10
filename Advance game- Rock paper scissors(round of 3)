@@ -1,0 +1,42 @@
+### rock paper scissors game with 3 rounds
+import random
+def rock_paper_scissor():
+    choices = ["rock", "paper","scissors"]
+    user_score = 0
+    computer_score = 0
+    rounds = 3
+    print("Welcome to rock paper scissors game (Best of 3)")
+    for round_num in range(1,rounds+1):
+        print(f"\n-----Round {round_num}-------")
+        user_choice = input("Enter your choice from rock paper or scissors: ")
+        if user_choice not in  choices:
+            print("❌Invalid choice! computer gets 1 point")
+            computer_score += 1
+            continue
+        computer_choice = random.choice(choices)
+        print(f"Computer choose: {computer_choice}")
+        if user_choice == computer_choice:
+            print("This round is tie")
+        elif (user_choice=="rock" and computer_choice == "scissors") or \
+                (user_choice == "scissors" and computer_choice == "paper") or \
+                (user_choice == "paper" and computer_choice == "rock"):
+            print("Congratulation! You win this round!")
+            user_score += 1
+        else:
+            print("computer wins this round! Better luck next round")
+            computer_score += 1
+        print(f"📊 Score is , You:{user_score} |computer : {computer_score}")
+
+        if user_score> rounds // 2:
+         print("🏆 Congratulation! You win the game ")
+         return
+        elif computer_score> rounds // 2:
+         print("Computer wins this Game. Better Luck next time!")
+         return
+    if user_score == computer_score:
+        print("This Game is overall a tie")
+    elif user_score > computer_score:
+         print("🏆 Congratulation! You win the game ")
+    else:
+          print("Computer wins this Game. Better Luck next time!")
+rock_paper_scissor()
