@@ -29,5 +29,12 @@ By the end , I will have **15 days projects** in python.
 -[X] Factor count of a number
 -[X] Word Counter
 -[X] Second largest number in a list
+###✔ Day 6-Python tasks
+-[X] Sum of digits(using while)
+-[X] Multiples of a number
+-[X] Count even and odd number from list
+-[X] Removing Duplicate from  a list
+
+
 -[X] Counting vowels in a string
 
