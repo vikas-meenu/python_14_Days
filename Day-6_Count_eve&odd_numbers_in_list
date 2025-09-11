@@ -1,0 +1,10 @@
+##task-3 count even and count odd from list
+numbers = [23,12,15,41,76,91,80,25,13,37,48]
+even_count=0
+odd_count=0
+for i in numbers:
+    if i%2==0:
+        even_count += 1
+    else:
+        odd_count += 1
+print(f"Even count= {even_count} and Odd count ={odd_count}")
