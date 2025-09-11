@@ -1,0 +1,7 @@
+###Bonus Task(Day 6) -Anagram checker
+str1=input("Enter first string: ").lower().replace(" "," ")
+str2=input("Enter second string: ").lower().replace(" "," ")
+if sorted(str1)==sorted(str2):
+    print("They are anagram")
+else:
+    print("They are not anagram")
