@@ -1,0 +1,13 @@
+###Bonus task of day 7 Prime factorization
+def prime_factor(n):
+    factor=[]
+    i = 2
+    while i<=n:
+        if n % i == 0:
+            factor.append(i)
+            n = n // i
+        else:
+            i +=1
+    return factor
+print(prime_factor(28))
+
