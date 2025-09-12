@@ -34,6 +34,12 @@ By the end , I will have **15 days projects** in python.
 -[X] Multiples of a number
 -[X] Count even and odd number from list
 -[X] Removing Duplicate from  a list
+###✔ Day 7-Python tasks
+-[X] Find Greatest Common Divisor
+-[X] Fibonacci Sequence
+-[X] Character Frequency Counter
+-[X] Find Min and Max in a list
+
 
 
 -[X] Counting vowels in a string
