@@ -24,6 +24,7 @@ By the end , I will have **15 days projects** in python.
 -[X] Check Prime Numbers
 -[X] Multiplication Table
 -[X] Reversing a string
+-[X] Counting Vowels
 ###✔ Day 5-Functions practice
 -[X] Sum of Even Numbers
 -[X] Factor count of a number
@@ -39,8 +40,7 @@ By the end , I will have **15 days projects** in python.
 -[X] Fibonacci Sequence
 -[X] Character Frequency Counter
 -[X] Find Min and Max in a list
+-[X] Bonus task-prime factorization
 
 
-
--[X] Counting vowels in a string
 
