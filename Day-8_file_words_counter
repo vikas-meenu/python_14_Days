@@ -1,0 +1,5 @@
+### task-3 file word counter
+with open("day6tasks.py","r") as file:
+    text=file.read()
+    words=text.split()
+print("Total words in file:",len(words))
