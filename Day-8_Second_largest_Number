@@ -1,0 +1,10 @@
+### task-4 Second largest number in a list
+numbers=[23,12,19,41,76,43,39,28,9,68,48]
+largest=second_largest=float(-0)
+for num in numbers:
+    if num>largest:
+        second_largest=largest
+        largest=num
+    elif num>second_largest and num !=largest:
+        second_largest=num
+print("second largest number from list is",second_largest)
