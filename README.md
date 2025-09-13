@@ -41,6 +41,12 @@ By the end , I will have **15 days projects** in python.
 -[X] Character Frequency Counter
 -[X] Find Min and Max in a list
 -[X] Bonus task-prime factorization
+###✔ Day 8-Python tasks
+-[X] Reverse a string(without slicing)
+-[X] Palindrom Checker(word+sentence)
+-[X] File words counter
+-[X] Find second largest number in a list
+-[X] Mini project-contact book
 
 
 
