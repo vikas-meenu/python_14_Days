@@ -47,6 +47,11 @@ By the end , I will have **15 days projects** in python.
 -[X] File words counter
 -[X] Find second largest number in a list
 -[X] Mini project-contact book
+###✔ Day 8-Python tasks
+-[X] Write and read numbers from a file
+-[X] JSON practice-Student data
+-[X] File words coun in JSON
+-[X] Main project-Export contact book
 
 
 
