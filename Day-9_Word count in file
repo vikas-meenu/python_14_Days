@@ -1,0 +1,11 @@
+###Task_3 Word count in Json
+import json
+text = "I love my mother and wife so much"
+with open("data.json","w") as file:
+    json.dump(text,file)
+with open ("data.json","r") as file:
+    loaded_text = json.load(file)
+words = loaded_text.split()
+unique_words = set(words)
+print( "words in file:",loaded_text)
+print("Unique word in file",len(unique_words))
