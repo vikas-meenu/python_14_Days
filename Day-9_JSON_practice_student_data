@@ -1,0 +1,10 @@
+###Task_2 JSON practice- Student Data
+import json
+Student = {"Name":"Sakshi" , "Age":"18", "Marks" : [90,88,92]}
+with open("Student.json","w") as file:
+    json.dump(Student,file,indent=4)
+with open ("Student.json","r") as file:
+    loaded_students = json.load(file)
+print("Student Name :",loaded_students["Name"])
+avg_marks = sum(loaded_students["Marks"])/len(loaded_students["Marks"])
+print("Average Marks :",avg_marks)
