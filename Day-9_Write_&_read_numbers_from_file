@@ -1,0 +1,11 @@
+###Task_1.Write and Read Numbers from file
+import json
+Numbers = []
+for i in range(5):
+    num = int(input(f" Enter Number {i+1}: "))
+    Numbers.append(num)
+with open ("Numbers.json","w") as file:
+    json.dump(Numbers, file)
+with open("Numbers.json", "r") as file:
+     loaded_Numbers = json.load(file)
+print("Numbers in file:", loaded_Numbers)
