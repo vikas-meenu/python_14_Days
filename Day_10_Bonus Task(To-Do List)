@@ -1,0 +1,89 @@
+##Bonus task Day-10 todo tasks
+import json
+import os
+def load_tasks():
+    if os.path.exists("tasks.json"):
+        with open("task,json","r") as f:
+            return json.load(f)
+    return[]
+def save_tasks(tasks):
+    with open("task.json","w") as f:
+        json.dump(tasks,f,indent=4)
+def add_tasks(tasks):
+    task=input("Enter new task: ").strip()
+    if task:
+        tasks.append({"task" : task,"done":False})
+        save_tasks(tasks)
+        print("✔ Task added ")
+    else:
+        print("⚠ Empty task not added")
+def view_tasks(tasks):
+    print("\n Your Tasks")
+    if not tasks:
+        print("No task added yet !")
+        return
+    for i,t in enumerate(tasks):
+        status = "✔" if t.get("done") else " "
+        print(f"{i + 1}.[{status}] {t.get("task")}")
+def mark_done(tasks):
+    try:
+        index=int(input("Enter task number to be mark done: ").strip())-1
+    except ValueError:
+        print("❌ Please enter a valid task Number")
+        return
+    if 0<= index <len(tasks):
+      tasks[index]["done"]=True
+      save_tasks(tasks)
+      print(f"✔ Task successfully marked done")
+    else:
+        print("❌invalid task number")
+def delete_tasks(tasks):
+    try:
+        index=int(input("Enter task number to be deleted: ").strip())-1
+    except ValueError:
+        print("❌ Please enter a valid task Number")
+        return
+    if 0 <= index < len(tasks):
+        remove=tasks.pop(index)
+        save_tasks(tasks)
+        print(f"Deleted task: {remove.get('task')}")
+    else:
+        print("❌ Invalid task number! ")
+def export_tasks(tasks):
+    if not tasks:
+        print("There is no tasks to export")
+        return
+    with open("tasks.txt","w") as f:
+        for i,t in enumerate(tasks):
+            status="✔" if t.get("done") else " "
+            f.write(f"{i+1}. [] {t}\n")
+            print("✔Tasks exported successfully")
+def show_menu():
+    print("\n To do List")
+    print("1.Add task")
+    print("2.View tasks")
+    print("3.Mark task done")
+    print("4.Delete Task")
+    print("5.Export Tasks")
+    print("6.Exit")
+def main():
+    tasks = load_tasks()
+    while True:
+        show_menu()
+        choice = input("Enter your choice: ").strip()
+        if choice == "1":
+            add_tasks(tasks)
+        elif choice=="2":
+            view_tasks(tasks)
+        elif choice=="3":
+            mark_done(tasks)
+        elif choice=="4":
+            delete_tasks(tasks)
+        elif choice=="5":
+            export_tasks(tasks)
+        elif choice=="6":
+            print("Exiting To do list, Bye!")
+        else:
+            print("❌Invalid choice! Try Again")
+if __name__ == "__main__":
+    main()
