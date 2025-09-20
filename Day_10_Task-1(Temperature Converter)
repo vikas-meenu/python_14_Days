@@ -1,0 +1,14 @@
+###Task-1 _Temperature_converter
+def celsius_to_fahrenheit(c):
+    return (c*9/5)+32
+def fahrenheit_to_celsius(f):
+    return (f-32)*5/9
+choice = input("convert (1) celsius to fahrenheit or (2) fahrenheit to celsius: ")
+if choice =="1":
+    c=float(input("enter celsius: "))
+    print("celsius to fahrenheit",celsius_to_fahrenheit(c))
+elif choice == "2":
+    f = float(input("enter fahrenheit: "))
+    print("fahrenheit to celsius",fahrenheit_to_celsius(f))
+else:
+    print("❌ Invalid choice !")
