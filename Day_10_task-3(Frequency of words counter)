@@ -1,0 +1,11 @@
+### Task-3 Frequency of words counter
+sentence = input("enter sentence: ")
+words = sentence.split()
+freq={}
+for word in words:
+    word = word.lower()
+    if word in freq:
+        freq[word] +=1
+    else:
+     freq[word] = 1
+print("frequency of words",freq)
