@@ -1,0 +1,5 @@
+## Day-11
+###Task-1(Word Counter)
+sentence=input("Enter a sentence: ").strip()
+word=sentence.split()
+print("Number of words in your sentence is ",len(word))
