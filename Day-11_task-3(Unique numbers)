@@ -1,0 +1,10 @@
+###Task-3(Unique numbers)
+numbers = input("Enter numbers separated by space: ").split()
+clean_numbers =[]
+for n in numbers:
+    try:
+        clean_numbers.append(int(n))
+    except ValueError:
+        print(f"skipping invalid entry: {n}")
+unique_numbers = sorted(set(clean_numbers))
+print("unique numbers:", unique_numbers)
