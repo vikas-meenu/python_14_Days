@@ -1,0 +1,64 @@
+### Day-11,Mini project (Notes App)
+def add_note(notes):
+    note = input("Enter New Notes: ").strip()
+    if note:
+        notes.append(note)
+        print("Notes added Successfully!")
+    else:
+         print("⚠ Empty Notes not allowed")
+def view_notes(notes):
+    if not notes:
+        print("⚠ No Notes saved yet")
+    else:
+        print("\n---Your Notes---:")
+        for i,note in enumerate(notes,start=1):
+            print(f"{i}. {note}")
+def search_notes(notes):
+    if not notes:
+        print("No Notes saved yet")
+        return
+    keyword=input("Enter Keyword to search notes: ").strip().lower()
+    results=[note for note in notes if keyword in note.lower()]
+    if results:
+        print("\n Search Results: ")
+        for i,note in enumerate(results,start=1):
+            print(f"{i}. {note}")
+    else:
+        print("keyword not matched ")
+def delete_note(notes):
+    if not notes:
+        print("⚠ No notes Available!")
+        return
+    for i , note in enumerate(notes,start=1):
+        print(f"{i}. {note}")
+        try:
+            index= int(input("Enter the note number you want to delete: "))
+            if 1<=index<=len(notes):
+                removed = notes.pop(index-1)
+                print(f"Deleted Note: {removed}")
+        except ValueError:
+            print("Please Enter Valid Note Number")
+def main():
+    notes = []
+    while True:
+        print("\n----Notes App----:")
+        print("1.Add Note")
+        print("2.View Notes")
+        print("3.Search Notes")
+        print("4.Delete Note")
+        print("5.Exit")
+        choice=int(input("Enter Your Choice(1-5): "))
+        if choice==1:
+            add_note(notes)
+        elif choice==2:
+            view_notes(notes)
+        elif choice==3:
+            search_notes(notes)
+        elif choice==4:
+            delete_note(notes)
+        elif choice==5:
+            print("Exiting the Notes App Bye!")
+        else:
+            print("⚠ Choice not valid Please try again")
+if __name__=="__main__":
+    main()
