@@ -57,6 +57,13 @@ By the end , I will have **15 days projects** in python.
 -[X] Simple Calculator
 -[X] Frequency of words counter
 -[X] Mini project-To-Do list in JSON file
+###✔ Day 11-Python tasks
+-[X] Word counter
+-[X] palindrome checker
+-[X] Unique numbers 
+-[X] Notes App
+
+
 
 
 
