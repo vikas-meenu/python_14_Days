@@ -62,6 +62,11 @@ By the end , I will have **15 days projects** in python.
 -[X] palindrome checker
 -[X] Unique numbers 
 -[X] Notes App
+###✔ Day 12-Python tasks
+-[X] Factorial Calculator
+-[X] Fibonacci sequence
+-[X] Character frequency calculator
+-[X] Managing Student Data in Json file
 
 
 
