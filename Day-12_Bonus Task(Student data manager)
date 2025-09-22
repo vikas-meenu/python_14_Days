@@ -1,0 +1,51 @@
+##Bonus task Day-12 Student Data Manager
+import json
+def add_student(students):
+    name = input("Enter name of a student: ")
+    try:
+        marks = float(input("Enter marks of student: "))
+    except ValueError:
+        print("⚠ Invalid marks! Marks have to be number only")
+        return
+    students[name] = marks
+    print(f"Student {name} has been added to students list with {marks}")
+def view_students(students):
+    if not students:
+        print("No student found!")
+    else:
+        print("\n--student list--")
+        for name,marks in students.items():
+            print(f"Name: {name}:{marks}")
+def show_topper(students):
+    if not students:
+        print("No student found!")
+        return
+    topper=max(students,key=students.get)
+    print(f"Topper: {topper} with marks {students[topper]}")
+def export_students(students):
+    with open("students.json","w") as file:
+        json.dump(students,file,indent=4)
+def main():
+    students={}
+    while True:
+        print("\n----Student List----")
+        print("1. Add student")
+        print("2. View students")
+        print("3.Show Topper")
+        print("4.Export students")
+        print("5.Exit")
+        choice=int(input("Enter choice(1-5): "))
+        if choice==1:
+            add_student(students)
+        elif choice==2:
+            view_students(students)
+        elif choice==3:
+            show_topper(students)
+        elif choice==4:
+            export_students(students)
+        elif choice==5:
+            print("Exiting from Student File")
+        else:
+            print("Invalid choice! Please Try Again!")
+if __name__=="__main__":
+    main()
