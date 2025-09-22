@@ -1,0 +1,6 @@
+### Task-3 Frequency of character calculator
+sentence = input("Enter sentence or a word: ")
+freq = {}
+for char in sentence:
+    freq[char]=freq.get(char,0)+1
+print(f"frequency of characters in {sentence} is {freq}")
