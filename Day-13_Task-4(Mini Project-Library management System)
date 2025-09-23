@@ -1,0 +1,45 @@
+### Mini project(library management system)
+import json
+class library:
+    def __init__(self):
+        self.book=[]
+        self.load_from_file()
+    def add_book(self,title):
+        self.book.append(title)
+        print(f"{title} added to library")
+    def view_book(self):
+        if not self.book:
+            print("No book found")
+        else:
+            print("\n Book in library")
+            for i,book in enumerate(self.book,1):
+                print(f"{i}. {book}")
+    def search_book(self,title):
+        if title in self.book:
+            print(f"{title} found in library")
+        else:
+            print("Title not found")
+    def delete_book(self,title):
+        if title in self.book:
+            self.book.remove(title)
+            print(f"{title} deleted from library")
+        else:
+            print("Book not found")
+    def save_to_file(self):
+        with open("library.json","w") as f:
+            json.dump(self.book,f,indent=4)
+            print("library saved to library.json file")
+    def load_from_file(self):
+        try:
+            with open("library.json", "r") as f:
+                self.book = json.load(f)
+        except FileNotFoundError:
+            self.book=[]
+## Usuage of class
+from library import library
+lib=library()
+lib.add_book("Rich Dad Poor Dad")
+lib.add_book("Autobiography of Yogi")
+lib.view_book()
+lib.save_to_file()
+lib.search_book("Rich Dad Poor Dad")
