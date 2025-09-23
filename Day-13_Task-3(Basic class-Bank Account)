@@ -1,0 +1,27 @@
+### Task-3 Basic Class-bank account
+class BankAccount:
+    def __init__(self,name,balance=0):
+        self.name=name
+        self.balance=balance
+    def deposit(self,amount):
+        self.balance+=amount
+        print(f"{amount} deposited! New balance is: {self.balance}")
+    def withdraw(self,amount):
+        if amount>self.balance:
+            print("Insufficient amount!")
+        else:
+            self.balance-=amount
+            print(f"{amount} withdrawn! New balance is: {self.balance}")
+    def show_balance(self):
+        print(f"{self.name} balance is: {self.balance}")
+
+### Usage of class
+from BankAccount import BankAccount
+acc1 = BankAccount("Ananya",100000)
+acc1.show_balance()
+acc1.deposit(5000)
+acc1.withdraw(10000)
+acc1.withdraw(1000)
+
+acc2=BankAccount("Maya",1000000)
+acc2.show_balance()
