@@ -1,0 +1,7 @@
+### Task-2 count words and lines in file
+with open("notes.txt","r") as file:
+    lines =file.readlines()
+count_lines = len(lines)
+count_words=sum(len(line.split()) for line in lines)
+print("Total lines are:",count_lines)
+print("Total words are:",count_words)
