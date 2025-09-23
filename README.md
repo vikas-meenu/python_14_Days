@@ -67,6 +67,12 @@ By the end , I will have **15 days projects** in python.
 -[X] Fibonacci sequence
 -[X] Character frequency calculator
 -[X] Managing Student Data in Json file
+###✔ Day 13-Python tasks
+-[X] File writter and reader
+-[X] Count Words in a File
+-[X] Basic Class-Bank Account
+-[X] Mini Project(Libraray Management System)
+
 
 
 
