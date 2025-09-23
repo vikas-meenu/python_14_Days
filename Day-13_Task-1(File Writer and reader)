@@ -1,0 +1,8 @@
+### Task1 File writer and reader
+sentence=input("Enter a sentence: ") #Asking user to enter a sentence
+with open("notes.txt","w") as file:
+    file.write(sentence)
+with open("notes.txt","r") as file:
+    content = file.read()
+    print("\ncontent of notes.txt is : ")
+    print(content)
