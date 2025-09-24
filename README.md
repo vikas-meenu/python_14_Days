@@ -72,6 +72,11 @@ By the end , I will have **15 days projects** in python.
 -[X] Count Words in a File
 -[X] Basic Class-Bank Account
 -[X] Mini Project(Libraray Management System)
+###✔ Day 14-Python tasks
+-[X] Student Grade Calculator
+-[X] Expenses Tracker
+-[X] Simple Quiz
+-[X] Mini Project(Personal Diary App)
 
 
 
