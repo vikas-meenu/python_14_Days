@@ -1,0 +1,14 @@
+import json
+expenses=[]
+def add_expenses(description,amount):
+    expenses.append({"description":description,"amount":amount})
+def view_expenses():
+    for i,e in enumerate(expenses,1):
+        print(f"{i}. {e['description']},${e['amount']}")
+def total_spent():
+    total=sum(e['amount'] for e in expenses)
+    print(f"Total spent:{total}")
+def save_expenses():
+    with open("expenses.json","w") as f:
+        json.dump(expenses,f,indent=4)
+        print("Expenses added to expenses.json")
