@@ -12,3 +12,11 @@ def save_expenses():
     with open("expenses.json","w") as f:
         json.dump(expenses,f,indent=4)
         print("Expenses added to expenses.json")
+### Usage 
+from Expense_tracker import *
+add_expenses("Grocery",500)
+add_expenses("mobile bill",670)
+add_expenses("food",120)
+view_expenses()
+save_expenses()
+total_spent()
