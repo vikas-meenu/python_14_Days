@@ -1,0 +1,39 @@
+# Day-14 Task-4 Mini project (Personal Diary App)
+import json
+class Diary:
+    def __init__(self):
+        self.entries=[]
+        self.load_from_file()
+    def add_entries(self,date,text):
+        self.entries.append({"date":date,"text":text})
+        print("Entry added!")
+    def view_entries(self):
+        if not self.entries:
+            print("No Entries yet!")
+        else:
+            for i,e in enumerate(self.entries,1):
+                print(f"{i}. {e['date']}-{e['text']}")
+    def search_entries(self,keyword):
+        results =[e for e in self.entries if keyword.lower() in e['text'].lower()]
+        if results:
+            print("Search Results")
+            for r in results:
+                print(f"{r['date']}-{r['text']}")
+            else:
+                print("No keyword matched!")
+    def delete_entries(self,index):
+        if 0<=index<=len(self.entries):
+            removed=self.entries.pop(index)
+            print(f"\n Entries {removed['date']} deleted")
+        else:
+            print("Invalid Entry")
+    def save_to_file(self):
+        with open ("diary.json","w") as file:
+            json.dump(self.entries, file ,indent=4)
+            print("Entry saved to dairy.json")
+    def load_from_file(self):
+        try:
+            with open("diary.json","r") as file:
+                self.entries = json.load(file)
+        except FileNotFoundError:
+            self.entries=[]
