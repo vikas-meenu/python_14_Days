@@ -29,15 +29,19 @@ def delete_note(notes):
     if not notes:
         print("⚠ No notes Available!")
         return
+    print("\n---Your Notes---:")
     for i , note in enumerate(notes,start=1):
         print(f"{i}. {note}")
-        try:
-            index= int(input("Enter the note number you want to delete: "))
-            if 1<=index<=len(notes):
-                removed = notes.pop(index-1)
-                print(f"Deleted Note: {removed}")
-        except ValueError:
-            print("Please Enter Valid Note Number")
+    try:
+        index = int(input("Enter the note number you want to delete: "))
+        if 0 <= index <= len(notes):
+            removed = notes.pop(index-1)
+            print(f"Deleted Note: {removed}")
+        else:
+            print("Note number not available")
+    except ValueError:
+        print("Please Enter Valid Note Number")
+
 def main():
     notes = []
     while True:
