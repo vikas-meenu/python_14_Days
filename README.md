@@ -78,8 +78,11 @@ By the end , I will have **15 days projects** in python.
 -[X] Simple Quiz
 -[X] Mini Project(Personal Diary App)
 
-
-
+####Advance 14_Days_python _learning_challenge
+##✔Day-1 TAsK
+-[x] nested Dictionary
+-[x] Dictionary of list
+-[x] Minio project-Student's gradebook
 
 
 
